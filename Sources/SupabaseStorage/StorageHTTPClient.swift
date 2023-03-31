@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 public protocol StorageHTTPClient {
   func fetch(_ request: URLRequest) async throws -> (Data, HTTPURLResponse)
